@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Grid, Nav, Navbar } from 'react-bootstrap';
 import "./App.css";
-import { Grid, Navbar } from 'react-bootstrap';
 
 import Footer from './Footer';
 import Header from './Header';
+import PairingQuizComp from './PairingQuizComp';
 import Sidebar from './Sidebar';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
           <Header />
           <Sidebar />
         </Navbar>
+        <PairingQuizComp />
         <Footer />
       </Grid>
     );
