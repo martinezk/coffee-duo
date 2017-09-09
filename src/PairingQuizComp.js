@@ -13,9 +13,6 @@ class PairingQuizComp extends Component {
      answerOptions: [],
      answer: '',
      answersCount: {
-       nintendo: 0,
-       microsoft: 0,
-       sony: 0
      },
      result: ''
     };
@@ -24,7 +21,7 @@ class PairingQuizComp extends Component {
     return (
       <div>
         <h2>Food Pairings</h2>
-        <Question content="What is your sign?" />
+        <Question content="What is your favorite drink?" />
       </div>
       
     );
