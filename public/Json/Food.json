@@ -1,0 +1,114 @@
+[
+  {
+    "Item": "Blueberry Muffin",
+    "ImageURL": "BlueberryMuffin.jpg",
+    "Description": "A flavorful muffin with blueberries, yogurt and honey.",
+    "Type": "Hot",
+    "Pairing": "Sweet"
+  },
+  {
+    "Item": "Cinnamon Morning Bun",
+    "ImageURL": "CinnMornigBun.jpg",
+    "Description": "Spicy single-origin Sumatran cinnamon is swirled around a flaky, buttery pastry.",
+    "Type": "Hot",
+    "Pairing": "Sweet"
+  },
+  {
+    "Item": "Cranberry Orange Scone",
+    "ImageURL": "CranOrangeScone.jpg",
+    "Description": "Each bite of this buttery scone showcases tangy cranberries and tart orange zest that are perfectly balanced with a ribbon of tangy-sweet cranberry spread.",
+    "Type": "Hot",
+    "Pairing": "Sweet"
+  },
+  {
+    "Item": "Cheese Danish",
+    "ImageURL": "CheeseDanish.jpg",
+    "Description": "A flaky pastry folded around reduced-fat cream cheese.",
+    "Type": "Hot",
+    "Pairing": "Sweet"
+  },
+  {
+    "Item": "Smores Bar",
+    "ImageURL": "SmoresBar.jpg",
+    "Description": "This summer treat starts with a slightly crunchy graham crust, then a layer of milk chocolate and finally it's piled high with lightly-toasted marshmallows.",
+    "Type": "Cold",
+    "Pairing": "Sweet"
+  },
+  {
+    "Item": "Cake Pop",
+    "ImageURL": "CakePop.jpg",
+    "Description": "Cake is dipped in white chocolatey flavored coating and sweetly decorated.",
+    "Type": "Cold",
+    "Pairing": "Sweet"
+  },
+  {
+    "Item": "Double Chocolate Brownie",
+    "ImageURL": "DoubleChocBrownie.jpg",
+    "Description": "A classic brownie made with premium chocolate and cocoa.",
+    "Type": "Cold",
+    "Pairing": "Sweet"
+  },
+  {
+    "Item": "Marshmellow Dream Bar",
+    "ImageURL": "MarshmellowBar.jpg",
+    "Description": "This crispy, chewy marshmallow bar is made of ooey gooey soft marshmallows, crispy rice and pure butter to create a sweet treat.",
+    "Type": "Cold",
+    "Pairing": "Sweet"
+  },
+  {
+    "Item": "Bacon Gouda",
+    "ImageURL": "BaconGouda.jpg",
+    "Description": "Applewood smoked bacon, melty aged Gouda and a parmesan frittata are layered on an artisan roll.",
+    "Type": "Hot",
+    "Pairing": "Savory"
+  },
+  {
+    "Item": "Almont Croissant",
+    "ImageURL": "AlmondCroissant.jpg",
+    "Description": "A rich, almond flan is enveloped in a flaky, buttery croissant, then topped with sliced almonds. It's the perfect combination of sweet and savory.",
+    "Type": "Hot",
+    "Pairing": "Sour"
+  },
+  {
+    "Item": "Pumpkin Bread",
+    "ImageURL": "PumpkinBread.jpg",
+    "Description": "A gently spiced bread with pumpkin flavors and pepitas.",
+    "Type": "Hot",
+    "Pairing": "Bitter"
+  },
+  {
+    "Item": "Classic Coffee Cake",
+    "ImageURL": "CoffeeCake.jpg",
+    "Description": "A traditional cake with cinnamon and brown sugar.",
+    "Type": "Hot",
+    "Pairing": "Sour"
+  },
+  {
+    "Item": "Tomato & Mozzarella",
+    "ImageURL": "TomatoMozz.jpg",
+    "Description": "Roasted tomatoes, mozzarella, spinach and basil pesto toasted focaccia.",
+    "Type": "Cold",
+    "Pairing": "Savory"
+  },
+  {
+    "Item": "Lemon Pound Cake",
+    "ImageURL": "LemonCake.jpg",
+    "Description": "A moist lemon cake with sweet icing.",
+    "Type": "Cold",
+    "Pairing": "Sour"
+  },
+  {
+    "Item": "Pecan Tart",
+    "ImageURL": "PecanTart.jpg",
+    "Description": "Crunchy pecans, brown sugar and honey all in a buttery crust create the perfect balance in this nutty, sweet treat.",
+    "Type": "Cold",
+    "Pairing": "Bitter"
+  },
+  {
+    "Item": "Oatmeal Cookie",
+    "ImageURL": "OatmealCookie.jpg",
+    "Description": "A chewy cookie with rolled oats, raisins and dried apricots.",
+    "Type": "Cold",
+    "Pairing": "Sour"
+  }
+]

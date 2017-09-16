@@ -1,0 +1,114 @@
+[
+    {
+      "Item": "Caramel Macchiato",
+      "Image": "CaramelMacchiato.jpg",
+      "Description": "Freshly steamed milk with vanilla-flavored syrup is marked with espresso and topped with caramel drizzle for an oh-so-sweet finish.",
+      "Type": "Hot",
+      "Pairing": "Sweet"
+    },
+    {
+      "Item": "Pumpkin Spice Latte",
+      "Image": "PumpkinSpLatte.jpg",
+      "Description": "Starbucks signature espresso and milk are highlighted by flavor notes of pumpkin, cinnamon, nutmeg and clove to create this incredible beverage that's a fall favorite.",
+      "Type": "Hot",
+      "Pairing": "Sweet"
+    },
+    {
+      "Item": "Caffe Mocha",
+      "Image": "CaffeMocha.jpg",
+      "Description": "A combination of rich, full-bodied espresso with bittersweet mocha sauce and steamed milk, then topped off with sweetened whipped cream.",
+      "Type": "Hot",
+      "Pairing": "Sweet"
+    },
+    {
+      "Item": "Cinnamon Dolce Latte",
+      "Image": "CinnDolceLatte.jpg",
+      "Description": "Freshly steamed milk and cinnamon dolce flavored syrup added to classic espresso, then topped off with sweetened whipped cream and cinnamon dolce topping.",
+      "Type": "Hot",
+      "Pairing": "Sweet"
+    },
+    {
+      "Item": "Cappuccino",
+      "Image": "Cappuccino.jpg",
+      "Description": "Dark, rich espresso lies in wait under a smoothed and stretched layer of thick foam. It's truly the height of a baristas' craft.",
+      "Type": "Hot",
+      "Pairing": "Bitter"
+    },
+    {
+      "Item": "Salted Caramel Mocha",
+      "Image": "SaltCaramelMocha.jpg",
+      "Description": "Mocha sauce and toffee nut syrup are combined with coffee and milk, then topped with sweetened whipped cream, caramel drizzle and a blend of turbinado sugar and sea salt.",
+      "Type": "Hot",
+      "Pairing": "Savory"
+    },
+    {
+      "Item": "Chai Latte",
+      "Image": "ChaiLatte.jpg",
+      "Description": "Black tea infused with cinnamon, clove, and other warming spices is combined with steamed milk and topped with foam for the perfect balance of sweet and spicy.",
+      "Type": "Hot",
+      "Pairing": "Sour"
+    },
+    {
+      "Item": "Green Tea Latte",
+      "Image": "GreenTeaLatte.jpg",
+      "Description": "Smooth and creamy matcha is lightly sweetened and served with steamed milk. A perfect zen.",
+      "Type": "Hot",
+      "Pairing": "Sour"
+    },
+    {
+      "Item": "Strawberries and Cream Frappuccino",
+      "Image": "StrawberriesCream.jpg",
+      "Description": "Strawberries and milk are blended with ice and topped with a swirl of whipped cream.",
+      "Type": "Cold",
+      "Pairing": "Sweet"
+    },
+    {
+      "Item": "Caramel Frappuccino",
+      "Image": "CaramelFrapp.jpg",
+      "Description": "Buttery caramel syrup meets coffee, milk and ice for a rendezvous in the blender. Then whipped cream and caramel sauce layer the love on top.",
+      "Type": "Cold",
+      "Pairing": "Sweet"
+    },
+    {
+      "Item": "Cinnamon Dolce Fruappuccino",
+      "Image": "CinnDolceFrapp.jpg",
+      "Description": "Coffee with cinnamon dolce flavored syrup, blended with milk and ice. Topped with sweetened whipped cream and our cinnamon dolce topping.",
+      "Type": "Cold",
+      "Pairing": "Sweet"
+    },
+    {
+      "Item": "Java Chip Frappuccino",
+      "Image": "JavaChipFrapp.jpg",
+      "Description": "Mocha sauce is blended with Frappuccino chips, coffee, milk and ice then top with whipped cream and mocha drizzle for endless java joy.",
+      "Type": "Cold",
+      "Pairing": "Sweet"
+    },
+    {
+      "Item": "Lemon Bar Creme Frappuccino",
+      "Image": "LemonBarFrapp.jpg",
+      "Description": "A sweet and sour mix that brings lemonade and vanilla together. Finished perfectly with whipped cream and a caramel sugar sprinkle.",
+      "Type": "Cold",
+      "Pairing": "Sour"
+    },
+    {
+      "Item": "Cool Lime Refresher",
+      "Image": "CoolLimeRefresh.jpg",
+      "Description": "Real fruit juice, mint and a lime slice shaken with Green Coffee Extract for a boost of natural energy, served over ice.",
+      "Type": "Cold",
+      "Pairing": "Sour"
+    },
+    {
+      "Item": "Cold Brew Coffee",
+      "Image": "ColdBrew.jpg",
+      "Description": "Small-batch cold brew slow-steeped for a super smooth taste has a naturally sweet flavor and cascading, velvety crema.",
+      "Type": "Cold",
+      "Pairing": "Savory"
+    },
+    {
+      "Item": "Coffee Frappuccino",
+      "Image": "CoffeeFrapp.jpg",
+      "Description": "Coffee meets milk and ice in a blender to create one of the original Frappuccino beverages.",
+      "Type": "Cold",
+      "Pairing": "Bitter"
+    }
+  ]
