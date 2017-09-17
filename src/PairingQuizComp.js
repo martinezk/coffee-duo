@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
 
+import Drinks from '../public/Json/Drinks.json';
 import Question from './Question';
+
 
 class PairingQuizComp extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-     counter: 0,
      questionId: 1,
      question: '',
      answerOptions: [],
+     answerTypes: [
+       hot, 
+       cold
+     ],
+     answerPairings:[
+      sweet,
+      sour, 
+      savory, 
+      bitter
+     ],
      answer: '',
-     answersCount: {
-     },
      result: ''
     };
   }
