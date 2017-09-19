@@ -10,7 +10,7 @@ function Question(props) {
 }
 
 Question.propTypes = {
-  content: React.PropTypes.string.isRequired
+  content: PropTypes.string.isRequired
 };
 
 export default Question;

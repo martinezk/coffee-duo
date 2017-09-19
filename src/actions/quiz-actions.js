@@ -1,8 +1,14 @@
 import * as types from './action-types';
 
-export const removeType = (category) => {
+export const filterType = (pairing) => {
   return {
-    type: types.REMOVE_TYPE,
+    type: types.FILTER_TYPE,
+    pairing
+  };
+}
+export const allTypes = (category) => {
+  return {
+    type: types.ALL_TYPES,
     category
   };
 }

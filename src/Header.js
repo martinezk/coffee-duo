@@ -9,7 +9,7 @@ class Header extends Component {
       <Navbar.Header>
         <Navbar.Brand>
           <i className="fa fa-coffee" aria-hidden="true"></i>
-          <a href="#">Coffee Duo</a>
+          <a href="/">Coffee Duo</a>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>

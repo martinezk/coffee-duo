@@ -34,13 +34,13 @@ function PairingQuiz(props) {
   }
 
   PairingQuiz.propTypes = {
-    answer: React.PropTypes.string.isRequired,
-    answerOptions: React.PropTypes.array.isRequired,
-    counter: React.PropTypes.number.isRequired,
-    question: React.PropTypes.string.isRequired,
-    questionId: React.PropTypes.number.isRequired,
-    questionTotal: React.PropTypes.number.isRequired,
-    onAnswerSelected: React.PropTypes.func.isRequired
+    answer: PropTypes.string.isRequired,
+    answerOptions: PropTypes.array.isRequired,
+    counter: PropTypes.number.isRequired,
+    question: PropTypes.string.isRequired,
+    questionId: PropTypes.number.isRequired,
+    questionTotal: PropTypes.number.isRequired,
+    onAnswerSelected: PropTypes.func.isRequired
   };
 
   export default PairingQuiz;

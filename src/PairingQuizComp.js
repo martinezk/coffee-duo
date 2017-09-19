@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Drinks from '../public/Json/Drinks.json';
+/*import Drinks from '../public/Json/Drinks.json';*/
 import Question from './Question';
 
 
@@ -13,14 +13,14 @@ class PairingQuizComp extends Component {
      question: '',
      answerOptions: [],
      answerTypes: [
-       hot, 
-       cold
+       /*hot, 
+       cold */
      ],
      answerPairings:[
-      sweet,
+      /*sweet,
       sour, 
       savory, 
-      bitter
+      bitter */
      ],
      answer: '',
      result: ''

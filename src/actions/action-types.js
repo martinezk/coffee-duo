@@ -1,3 +1,2 @@
-export const HOT_DRINKS = 'HOT-DRINKS'
-export const COLD_DRINKS ='COLD_DRINKS'
-export const REMOVE_TYPE ='REMOVE_TYPE'
+export const FILTER_TYPE ='FILTER_TYPE'
+export const ALL_TYPES ='ALL_TYPES'

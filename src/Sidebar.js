@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 
 
@@ -7,10 +8,9 @@ class Sidebar extends Component {
     return (
       <Navbar.Collapse>
         <Nav bsStyle="pills" stacked>
-          <NavItem eventKey={1} href="/home">Home</NavItem>
-          <NavItem eventKey={2} href="/home">Pairings</NavItem>
-          <NavItem eventKey={3} href="/home">Drink Menu</NavItem>
-          <NavItem eventKey={4} href="/home">Food Menu</NavItem>
+          <NavItem eventKey={1}> <Link to="/">Home</Link></NavItem>
+          <NavItem eventKey={2} href="/drinks">Drink Menu</NavItem>
+          <NavItem eventKey={3} href="/food">Food Menu</NavItem>
         </Nav>
       </Navbar.Collapse>
     );
