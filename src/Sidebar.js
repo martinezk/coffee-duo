@@ -8,7 +8,7 @@ class Sidebar extends Component {
     return (
       <Navbar.Collapse>
         <Nav bsStyle="pills" stacked>
-          <NavItem eventKey={1}> <Link to="/">Home</Link></NavItem>
+          <NavItem eventKey={1} href='/'>Home</NavItem>
           <NavItem eventKey={2} href="/drinks">Drink Menu</NavItem>
           <NavItem eventKey={3} href="/food">Food Menu</NavItem>
         </Nav>
