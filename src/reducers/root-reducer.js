@@ -2,8 +2,8 @@ import {combineReducers} from 'redux';
 import {pairings, categories} from './quiz-reducer.js'
 
 const rootReducer = combineReducers({
-    pairings,
-    categories
+    /*pairings,
+    categories*/
 });
 
 export default rootReducer;
