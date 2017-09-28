@@ -1,12 +1,32 @@
-import * as types from '../actions/action-types';
-
-export default (state = [], action) => {
+export function itemsHasErrored(state = false, action) {
   switch (action.type) {
-    case types.ALL_TYPES:
-      return {...state };
-    case types.FILTER_TYPE:
-      return {...state };
-    default:
-      return state;
+      case 'ITEMS_HAS_ERRORED':
+          return action.hasErrored;
+
+      default:
+          return state;
   }
-};
+}
+
+export function itemsIsLoading(state = false, action) {
+  switch (action.type) {
+      case 'ITEMS_IS_LOADING':
+          return action.isLoading;
+
+      default:
+          return state;
+  }
+}
+
+export function items(state = [], action) {
+  switch (action.type) {
+      case 'ITEMS_FETCH_DATA_SUCCESS':
+          return action.items;
+
+      default:
+          return state;
+  }
+}
+//load both drinks and food in background
+//reducer for filtering hot or cold beverages
+//action and reducer for filtering by pairing group

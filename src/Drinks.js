@@ -40,8 +40,8 @@ class Drinks extends React.Component {
 
     return (
       <ul>
-        {this.state.items.map((item) => (
-          <li key={item.id}>
+        {this.state.items.map((item, index) => (
+          <li key={index}>
             {item.Item}
           </li>
         ))}
