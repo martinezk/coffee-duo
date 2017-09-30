@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { itemsFetchData } from './actions/quiz-actions';
 
+import Question from './Question';
+
 class PairingQuiz extends React.Component {
   componentDidMount() {
     this.props.fetchData('/api/json/Drinks.json');
@@ -17,21 +19,15 @@ class PairingQuiz extends React.Component {
       return <p>Loading...</p>;
     }
 
-    const buttonStyle = {
-      width: 100,
-      backgroundColor: "lightgrey",
-      margin: 10
-    }
-
     return (
       <div>
-        <h3>What type of beverage are you in the mood for?</h3>
-        <button style={buttonStyle}>Hot</button>
-        <button style={buttonStyle}>Cold</button>
+        <Question />
       </div>
     );
   }
 }
+//import a result component
+//result function -- "if item is drink type x, then display food type x"
 
 const mapStateToProps = (state) => {
   return {
