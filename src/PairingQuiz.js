@@ -1,46 +1,57 @@
 import React from 'react';
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
 
-import Question from './Question';
-import QuestionCount from './QuestionCount';
-import AnswerOptions from './AnswerOptions';
+import { connect } from 'react-redux';
+import { itemsFetchData } from './actions/quiz-actions';
 
-function PairingQuiz(props) {
-    function renderAnswerOptions(key) {
-        return (
-          <AnswerOptions
-            key={key.content}
-            answerContent={key.content}
-            answerType={key.type}
-            answer={props.answer}
-            questionId={props.questionId}
-            onAnswerSelected={props.onAnswerSelected}
-          />
-        );
-      }
-    
-    return (
-       <div className="quiz">
-         <QuestionCount
-           counter={props.questionId}
-           total={props.questionTotal}
-         />
-         <Question content={props.question} />
-         <ul className="answerOptions">
-           {props.answerOptions.map(renderAnswerOptions)}
-         </ul>
-       </div>
-    );
+class PairingQuiz extends React.Component {
+  componentDidMount() {
+    this.props.fetchData('/api/json/Drinks.json');
   }
 
-  PairingQuiz.propTypes = {
-    answer: PropTypes.string.isRequired,
-    answerOptions: PropTypes.array.isRequired,
-    counter: PropTypes.number.isRequired,
-    question: PropTypes.string.isRequired,
-    questionId: PropTypes.number.isRequired,
-    questionTotal: PropTypes.number.isRequired,
-    onAnswerSelected: PropTypes.func.isRequired
-  };
+  render() {
+    if (this.props.hasErrored) {
+      return <p>Error loading items</p>;
+    }
+    if (this.props.isLoading) {
+      return <p>Loading...</p>;
+    }
 
-  export default PairingQuiz;
+    const buttonStyle = {
+      width: 100,
+      backgroundColor: "lightgrey",
+      margin: 10
+    }
+
+    return (
+      <div>
+        <h3>What type of beverage are you in the mood for?</h3>
+        <button style={buttonStyle}>Hot</button>
+        <button style={buttonStyle}>Cold</button>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    items: state.items,
+    hasErrored: state.itemsHasErrored,
+    isLoading: state.itemsIsLoading
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchData: (url) => dispatch(itemsFetchData(url))
+  };
+};
+
+PairingQuiz.propTypes = {
+  fetchData: PropTypes.func.isRequired,
+  items: PropTypes.array.isRequired,
+  hasErrored: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(PairingQuiz);
