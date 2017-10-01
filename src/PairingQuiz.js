@@ -10,18 +10,26 @@ class PairingQuiz extends React.Component {
   componentDidMount() {
     this.props.fetchData('/api/json/Drinks.json');
   }
-
+  hotOrCold(temperature){
+    this.setState({temperature: temperature})
+    //reducer for filtering drinks
+  }
   render() {
+    let component;
     if (this.props.hasErrored) {
-      return <p>Error loading items</p>;
+      component = <p>Error loading items</p>;
+    } else if (this.props.isLoading) {
+      component = <p>Loading...</p>;
+    /*else if this.state.temperature{
+      component = hot or cold drinks
+    } */
+    } else {
+      component = <Question callback={this.hotOrCold}/>;
     }
-    if (this.props.isLoading) {
-      return <p>Loading...</p>;
-    }
-
+    //else if statement for final pairing
     return (
       <div>
-        <Question />
+        {component}
       </div>
     );
   }
