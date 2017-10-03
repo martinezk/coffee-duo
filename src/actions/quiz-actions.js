@@ -38,3 +38,7 @@ export function itemsFetchData(url) {
           .catch(() => dispatch(itemsHasErrored(true)));
   };
 }
+
+export function itemTypeHot(url){
+    return 
+}
