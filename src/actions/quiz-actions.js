@@ -39,6 +39,10 @@ export function itemsFetchData(url) {
   };
 }
 
-export function itemTypeHot(url){
-    return 
+export function itemTypeHot(){
+    return {type: 'ITEM_IS_HOT', filter: 'Hot'}
+}
+
+export function itemTypeCold(){
+    return {type: 'ITEM_IS_COLD', filter: 'Cold'}
 }

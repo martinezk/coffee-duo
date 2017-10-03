@@ -22,11 +22,15 @@ export function items(state = [], action) {
   switch (action.type) {
       case 'ITEMS_FETCH_DATA_SUCCESS':
           return action.items;
-
+      case 'ITEM_IS_HOT':
+      case 'ITEM_IS_COLD':
+          return state.filter(item => item.Type === action.filter);
       default:
           return state;
   }
 }
+
+
 //load both drinks and food in background
 //reducer for filtering hot or cold beverages
 //action and reducer for filtering by pairing group

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import { itemsFetchData } from './actions/quiz-actions';
+import { itemsFetchData, itemTypeHot, itemTypeCold } from './actions/quiz-actions';
 
 import Question from './Question';
 
@@ -10,23 +10,24 @@ class PairingQuiz extends React.Component {
   componentDidMount() {
     this.props.fetchData('/api/json/Drinks.json');
   }
-  pairingQuizQuestion(type){
+  pairingQuizQuestion = (type) =>{
     this.setState({type : type});
-    if("Hot"){
-      console.log('hot');
-    } else if ("Cold"){
-      console.log('cold');
+    if(type==="Hot"){
+      this.props.typeHot();
+    } else if (type==="Cold"){
+      this.props.typeCold();
     }
   }
 
   render() {
+    console.log(this.props.items);
     let component;
     if (this.props.hasErrored) {
       component = <p>Error loading items</p>;
     } else if (this.props.isLoading) {
       component = <p>Loading...</p>;
     } else {
-      component = <Question callback={this.pairingQuizQuestion.bind(this)}/>;
+      component = <Question callback={this.pairingQuizQuestion}/>;
     }
     //else if statement for final pairing
     return (
@@ -49,7 +50,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchData: (url) => dispatch(itemsFetchData(url))
+    fetchData: (url) => dispatch(itemsFetchData(url)),
+    typeHot: () => dispatch(itemTypeHot()),
+    typeCold: () => dispatch(itemTypeCold())
   };
 };
 
