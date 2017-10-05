@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import { itemsFetchData, itemTypeHot, itemTypeCold } from './actions/quiz-actions';
-
+import Pairing from './Pairing';
 import Question from './Question';
 
 class PairingQuiz extends React.Component {
@@ -26,7 +26,10 @@ class PairingQuiz extends React.Component {
       component = <p>Error loading items</p>;
     } else if (this.props.isLoading) {
       component = <p>Loading...</p>;
-    } else {
+    } else if (this.props.typeHot) {
+      component = <Pairing />;
+    }
+    else {
       component = <Question callback={this.pairingQuizQuestion}/>;
     }
     //else if statement for final pairing
