@@ -26,10 +26,7 @@ class PairingQuiz extends React.Component {
       component = <p>Error loading items</p>;
     } else if (this.props.isLoading) {
       component = <p>Loading...</p>;
-    } else if (this.props.typeHot) {
-      component = <Pairing />;
-    }
-    else {
+    } else {
       component = <Question callback={this.pairingQuizQuestion}/>;
     }
     //else if statement for final pairing
