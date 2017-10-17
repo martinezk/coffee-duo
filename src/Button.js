@@ -8,7 +8,7 @@ class Button extends React.Component {
       margin: 20
     };
     return(
-      <button style={buttonStyle}>{this.props.type}</button>
+      <button onClick={()=> {this.props.callback(this.props.type)}} style={buttonStyle}>{this.props.type}</button>
     );
   }
 }

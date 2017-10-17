@@ -7,8 +7,8 @@ class Question extends React.Component {
     return (
       <div>
         <h3>What type of beverage are you in the mood for?</h3>
-        <Button type="Hot" />
-        <Button type="Cold" />
+        <Button callback={this.props.callback} type="Hot" />
+        <Button callback={this.props.callback} type="Cold" />
       </div>
     );
   }
