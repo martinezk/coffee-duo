@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { itemsFetchData } from './actions/quiz-actions';
-import { Col, Row, Thumbnail, Button } from 'react-bootstrap';
+import { Col, Row, Thumbnail, Button} from 'react-bootstrap';
 
 class Pairing extends React.Component {
   componentDidMount() {
@@ -21,9 +21,9 @@ class Pairing extends React.Component {
         <h3>Choose which drink best suits you.</h3>
         <Row>
           {this.props.items.map((item, index) => (
-            <Col xs={6} md={4} key={index}>
+            <Col xs={6} md={3} key={index}>
               <Thumbnail src={item.Image}>
-                <Button bsStyle="primary">{item.Item}</Button>
+                <Button bsStyle="success">{item.Item}</Button>
               </Thumbnail>
             </Col>
           ))}
