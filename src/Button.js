@@ -1,16 +1,13 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
-class Button extends React.Component {
+class QuizButton extends React.Component {
   render() {
-    const buttonStyle = {
-      width: 100,
-      backgroundColor: "lightgrey",
-      margin: 20
-    };
+
     return(
-      <button onClick={()=> {this.props.callback(this.props.type)}} style={buttonStyle}>{this.props.type}</button>
+      <Button bsStyle="primary" onClick={()=> {this.props.callback(this.props.type)}}>{this.props.type}</Button>
     );
   }
 }
 
-export default Button;
+export default QuizButton;

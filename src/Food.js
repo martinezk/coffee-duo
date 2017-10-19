@@ -1,14 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { itemsFetchData } from './actions/quiz-actions';
+import { Row } from 'react-bootstrap';
+import Card from './Card';
 
 class Food extends React.Component {
-  componentDidMount(){
+  componentDidMount() {
     this.props.fetchData('/api/json/Food.json');
-  }  
+  }
 
-  render(){
+  render() {
     if (this.props.hasErrored) {
       return <p>Error loading items</p>;
     }
@@ -17,18 +19,16 @@ class Food extends React.Component {
     }
 
     return (
-      <ul>
+      <Row>
         {this.props.items.map((item, index) => (
-          <li key={index}>
-            {item.Item}
-          </li>
+          <Card key={index} id={index} {...this.props}/>
         ))}
-      </ul>
+      </Row>
     );
   }
 }
 
-const mapStateToProps= (state) =>{
+const mapStateToProps = (state) => {
   return {
     items: state.items,
     hasErrored: state.itemsHasErrored,
@@ -37,7 +37,7 @@ const mapStateToProps= (state) =>{
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return{
+  return {
     fetchData: (url) => dispatch(itemsFetchData(url))
   };
 };

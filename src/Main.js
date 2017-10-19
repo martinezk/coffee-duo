@@ -14,5 +14,4 @@ const Main = () => (
     </Switch>
   </div>
 )
-
-export default Main
+export default Main;

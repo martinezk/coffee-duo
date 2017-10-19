@@ -1,35 +1,39 @@
 import React from 'react';
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { itemsFetchData } from './actions/quiz-actions';
-import { items } from './actions/quiz-actions';
+import { Col, Row, Thumbnail, Button } from 'react-bootstrap';
 
 class Pairing extends React.Component {
-  componentDidMount(){
+  componentDidMount() {
     this.props.fetchData('/api/json/Drinks.json');
-  }  
+  }
 
-  render(){
+  render() {
     if (this.props.hasErrored) {
       return <p>Error loading items</p>;
     }
     if (this.props.isLoading) {
       return <p>Loading...</p>;
     }
-
     return (
-      <ul>
-        {this.props.items.map((item, index) => (
-          <li key={index}>
-            {item.Item}
-          </li>
-        ))}
-      </ul>
+      <div>
+        <h3>Choose which drink best suits you.</h3>
+        <Row>
+          {this.props.items.map((item, index) => (
+            <Col xs={6} md={4} key={index}>
+              <Thumbnail src={item.Image}>
+                <Button bsStyle="primary">{item.Item}</Button>
+              </Thumbnail>
+            </Col>
+          ))}
+        </Row>
+      </div>
     );
   }
 }
 
-const mapStateToProps= (state) =>{
+const mapStateToProps = (state) => {
   return {
     items: state.items,
     hasErrored: state.itemsHasErrored,
@@ -38,7 +42,7 @@ const mapStateToProps= (state) =>{
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return{
+  return {
     fetchData: (url) => dispatch(itemsFetchData(url))
   };
 };

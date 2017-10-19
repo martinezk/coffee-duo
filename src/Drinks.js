@@ -1,14 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
+
 import { connect } from 'react-redux';
 import { itemsFetchData } from './actions/quiz-actions';
+import { Col, Row, Thumbnail } from 'react-bootstrap';
 
 class Drinks extends React.Component {
-  componentDidMount(){
+  componentDidMount() {
     this.props.fetchData('/api/json/Drinks.json');
-  }  
+  }
 
-  render(){
+  render() {
     if (this.props.hasErrored) {
       return <p>Error loading items</p>;
     }
@@ -17,18 +19,21 @@ class Drinks extends React.Component {
     }
 
     return (
-      <ul>
+      <Row>
         {this.props.items.map((item, index) => (
-          <li key={index}>
-            {item.Item}
-          </li>
+          <Col xs={6} md={4} key={index}>
+            <Thumbnail src={item.Image}>
+              <h4>{item.Item}</h4>
+              <p>{item.Description}</p>
+            </Thumbnail>
+          </Col>
         ))}
-      </ul>
+      </Row>
     );
   }
 }
 
-const mapStateToProps= (state) =>{
+const mapStateToProps = (state) => {
   return {
     items: state.items,
     hasErrored: state.itemsHasErrored,
@@ -37,7 +42,7 @@ const mapStateToProps= (state) =>{
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return{
+  return {
     fetchData: (url) => dispatch(itemsFetchData(url))
   };
 };

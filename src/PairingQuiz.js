@@ -32,7 +32,7 @@ class PairingQuiz extends React.Component {
     //else if statement for final pairing
     return (
       <div>
-        {component}
+        <Pairing />
       </div>
     );
   }
