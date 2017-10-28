@@ -46,3 +46,7 @@ export function itemTypeHot(){
 export function itemTypeCold(){
     return {type: 'ITEM_IS_COLD', filter: 'Cold'}
 }
+
+export function itemPairing(pairing){
+    return {type: 'ITEM_PAIRING', filter: pairing}
+}

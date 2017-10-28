@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 class QuizButton extends React.Component {
   render() {
     return(
-      <Button bsStyle="primary" onClick={()=> {this.props.callback(this.props.type)}}>{this.props.type}</Button>
+      <Button bsStyle="primary" onClick={()=> {this.props.callback(this.props.type)}}>{this.props.name || this.props.type}</Button>
     );
   }
 }

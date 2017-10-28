@@ -25,6 +25,8 @@ export function items(state = [], action) {
       case 'ITEM_IS_HOT':
       case 'ITEM_IS_COLD':
           return state.filter(item => item.Type === action.filter);
+      case 'ITEM_PAIRING':
+          return state.filter(item => item.Pairing ===action.filter);  
       default:
           return state;
   }

@@ -6,7 +6,7 @@ class Card extends React.Component {
     return (
       <Col xs={6} md={4} key={this.props.index}>
         <Thumbnail src={this.item.Image}>
-          <h4>{this.item.Item}</h4>
+          <h5>{this.item.Item}</h5>
           <p>{this.item.Description}</p>
         </Thumbnail>
       </Col>

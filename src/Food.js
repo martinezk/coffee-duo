@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { itemsFetchData } from './actions/quiz-actions';
-import { Row } from 'react-bootstrap';
-import Card from './Card';
+import { Col, Row, Thumbnail } from 'react-bootstrap';
 
 class Food extends React.Component {
   componentDidMount() {
@@ -21,7 +20,12 @@ class Food extends React.Component {
     return (
       <Row>
         {this.props.items.map((item, index) => (
-          <Card key={index} id={index} {...this.props}/>
+          <Col xs={6} md={4} key={index}>
+            <Thumbnail src={`api/images/food/${item.ImageURL}`}>
+              <h4>{item.Item}</h4>
+              <p>{item.Description}</p>
+            </Thumbnail>
+          </Col>
         ))}
       </Row>
     );

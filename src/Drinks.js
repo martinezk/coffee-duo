@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { connect } from 'react-redux';
 import { itemsFetchData } from './actions/quiz-actions';
 import { Col, Row, Thumbnail } from 'react-bootstrap';
@@ -22,7 +21,7 @@ class Drinks extends React.Component {
       <Row>
         {this.props.items.map((item, index) => (
           <Col xs={6} md={4} key={index}>
-            <Thumbnail src={item.Image}>
+            <Thumbnail src={`api/images/drinks/${item.Image}`}>
               <h4>{item.Item}</h4>
               <p>{item.Description}</p>
             </Thumbnail>
