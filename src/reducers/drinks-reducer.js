@@ -26,13 +26,8 @@ export function items(state = [], action) {
       case 'ITEM_IS_COLD':
           return state.filter(item => item.Type === action.filter);
       case 'ITEM_PAIRING':
-          return state.filter(item => item.Pairing ===action.filter);  
+          return state.filter(item => item.Pairing === action.filter);  
       default:
           return state;
   }
 }
-
-
-//load both drinks and food in background
-//reducer for filtering hot or cold beverages
-//action and reducer for filtering by pairing group

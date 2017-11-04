@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { Col, Row, Thumbnail } from 'react-bootstrap';
 import { itemsFetchData } from './actions/quiz-actions';
 
-class FinalPairing extends React.Component {
-
+class Result extends React.Component {
   render() {
     return (
       <div>
@@ -12,7 +11,7 @@ class FinalPairing extends React.Component {
         <Row>
           {this.props.items.map((item, index) => (
             <Col xs={6} md={3} key={index}>
-              <Thumbnail src={item.Image}>
+              <Thumbnail src={`api/images/food/${item.ImageURL}`}>
                 <h4>{item.Item}</h4>
                 <p>{item.Description}</p>
               </Thumbnail>
@@ -25,8 +24,8 @@ class FinalPairing extends React.Component {
 }
 const mapStateToProps = (state) => {
   return {
-    items: state.items,
-    hasErrored: state.itemsHasErrored
+    items: state.food,
+    hasErrored: state.foodHasErrored
   };
 };
 
@@ -36,4 +35,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(FinalPairing);
+export default connect(mapStateToProps,mapDispatchToProps)(Result);

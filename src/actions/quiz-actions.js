@@ -18,6 +18,12 @@ export function itemsFetchDataSuccess(items) {
       items
   };
 }
+export function foodFetchDataSuccess(food) {
+    return {
+        type: 'FOOD_FETCH_DATA_SUCCESS',
+        food
+    };
+  }
 
 export function itemsFetchData(url) {
   return (dispatch) => {
@@ -38,6 +44,25 @@ export function itemsFetchData(url) {
           .catch(() => dispatch(itemsHasErrored(true)));
   };
 }
+export function foodFetchData(url) {
+    return (dispatch) => {
+        dispatch(itemsIsLoading(true));
+  
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+  
+                dispatch(itemsIsLoading(false));
+  
+                return response;
+            })
+            .then((response) => response.json())
+            .then((food) => dispatch(foodFetchDataSuccess(food)))
+            .catch(() => dispatch(itemsHasErrored(true)));
+    };
+  }
 
 export function itemTypeHot(){
     return {type: 'ITEM_IS_HOT', filter: 'Hot'}
