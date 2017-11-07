@@ -7,7 +7,7 @@ const drinkSchema = mongoose.Schema({
     Description: {type: String, required: true},
     Type: {type: String, required: true},
     Pairing: {type: String, required: true},
-});
+}, {collection: "drinks"});
 
 const foodSchema = mongoose.Schema({
     Item: {type: String, required: true},
@@ -15,9 +15,9 @@ const foodSchema = mongoose.Schema({
     Description: {type: String, required: true},
     Type: {type: String, required: true},
     Pairing: {type: String, required: true},
-});
+}, {collection: "food"});
 
-const Drinks = mongoose.model('Drinks', drinkSchema);
-const Food = mongoose.model('Food', foodSchema);
+const Drinks = mongoose.model('drinks', drinkSchema);
+const Food = mongoose.model('food', foodSchema);
 
 module.exports = { Drinks, Food };

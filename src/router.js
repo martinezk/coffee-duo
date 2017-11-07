@@ -1,7 +1,14 @@
 // 4 routes: Get drinks, filter drinks, get food, filter food
+const express = require('express');
+const router = express.Router();
+
+const bodyparser = require('body-parser');
+const jsonParser = bodyparser.json();
+
+const {Drinks, Food} = require ('./models');
 
 router.get('/drinks', (req, res) => {
-    Drink
+    Drinks
         .find()
         .exec()
         .then(drinks => {
@@ -25,3 +32,5 @@ router.get('/food', (req, res) => {
             res.status(500).json({ message: 'Something went wrong' });
         });
 }); 
+
+module.exports = router;
