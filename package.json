@@ -1,6 +1,7 @@
 {
   "name": "coffee-duo",
   "version": "0.1.0",
+  "proxy": "http://localhost:3001/",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.2",
@@ -53,12 +54,14 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/server.js",
+    "client": "node scripts/start.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
-    "axios": "^0.16.2"
+    "axios": "^0.16.2",
+    "concurrently": "^3.5.0"
   },
   "jest": {
     "collectCoverageFrom": [
